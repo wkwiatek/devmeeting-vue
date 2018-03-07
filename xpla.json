@@ -1,0 +1,14 @@
+{
+  "xpla.version": 1,
+  "name": "Vue.js DevMeeting",
+  "author": {
+    "name": "Wojciech Kwiatek",
+    "link": "https://twitter.com/WojciechKwiatek"
+  },
+  "dirs": [
+    {
+      "name": "1-intro",
+      "title": "Intro to Vue.js"
+    }
+  ]
+}
