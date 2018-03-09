@@ -36,7 +36,7 @@ export default new Vuex.Store({
 //     products: []
 //   },
 //   async fetchProducts() {
-//     this.state.products = await axios.get('/products.json').then(res => res.data);
+//     this.state.products = await axios.get('products.json').then(res => res.data);
 //   },
 //   addProduct(product) {
 //     this.state.products.push(product);
