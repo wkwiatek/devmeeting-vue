@@ -8,7 +8,7 @@
 
     <!-- 1. Vue gives as some nice syntax to cope with casual use cases -->
     <form @submit.prevent="onSubmit()">
-      <!-- 2. Any Angular fan here? v-model make a binding with defined in data object -->
+      <!-- 2. Any Angular fan here? v-model makes a binding with given object -->
       <input v-model="newProduct.name">
       <button>Add</button>
     </form>
@@ -36,7 +36,7 @@ export default {
     }
   },
   methods: {
-    //7/ 4. By keeping reference to data we can let Vue to do it's job
+    //7/ 4. By keeping reference to data we can let Vue to do its job
     onSubmit() {
       this.products.push({
         id: uuid(),

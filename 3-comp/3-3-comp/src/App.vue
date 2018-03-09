@@ -17,6 +17,7 @@ export default {
   name: 'app',
   components: {
     ProductList,
+    // AddProduct has to be defined as any other component
     AddProduct
   },
   data() {
