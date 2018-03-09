@@ -8,7 +8,7 @@ const store = {
   },
   //6/ And methods to update
   async fetchProducts() {
-    this.state.products = await axios.get('/products.json').then(res => res.data);
+    this.state.products = await axios.get('products.json').then(res => res.data);
   },
   addProduct(product) {
     this.state.products.push(product);

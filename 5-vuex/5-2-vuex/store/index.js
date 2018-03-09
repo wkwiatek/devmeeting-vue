@@ -26,7 +26,7 @@ export default new Vuex.Store({
     },
     //7/ actions can be async and can commit a mutation at any time
     async getProducts({ commit }) {
-      const payload = await axios.get('/products.json').then(res => res.data);
+      const payload = await axios.get('products.json').then(res => res.data);
       commit({
         type: 'setProducts',
         products: payload
