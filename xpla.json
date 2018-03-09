@@ -65,6 +65,18 @@
     {
       "name": "4-3-state",
       "title": "Task"
+    },
+    {
+      "name": "5-1-vuex",
+      "title": "Vuex store"
+    },
+    {
+      "name": "5-2-vuex",
+      "title": "Async actions"
+    },
+    {
+      "name": "5-3-vuex",
+      "title": "Task"
     }
   ]
 }
