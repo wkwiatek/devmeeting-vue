@@ -23,7 +23,7 @@ export default {
   // 3. Let's use one of lifecycle hooks to fetch some data when component is created
   async created() {
     // 4. products.json has been added to the 'public' directory and it's just an array that we had previously
-    this.products = await axios.get('/products.json').then(res => res.data);
+    this.products = await axios.get('products.json').then(res => res.data);
   },
   //5/ 1. Products will be initialized with empty array
   data() {
