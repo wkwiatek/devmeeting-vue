@@ -37,6 +37,22 @@
     {
       "name": "2-5-cli",
       "title": "Task"
+    },
+    {
+      "name": "3-1-comp",
+      "title": "Finding components"
+    },
+    {
+      "name": "3-2-comp",
+      "title": "Inputs"
+    },
+    {
+      "name": "3-3-comp",
+      "title": "Outputs"
+    },
+    {
+      "name": "3-4-comp",
+      "title": "Task"
     }
   ]
 }
