@@ -53,6 +53,18 @@
     {
       "name": "3-4-comp",
       "title": "Task"
+    },
+    {
+      "name": "4-1-state",
+      "title": "Async data fetch"
+    },
+    {
+      "name": "4-2-state",
+      "title": "Inputs"
+    },
+    {
+      "name": "4-3-state",
+      "title": "Task"
     }
   ]
 }
