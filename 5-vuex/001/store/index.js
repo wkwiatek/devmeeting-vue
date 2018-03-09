@@ -30,17 +30,3 @@ export default new Vuex.Store({
   // extra: we added to logger to see what's going on
   plugins: [createLogger()]
 });
-
-// const store = {
-//   state: {
-//     products: []
-//   },
-//   async fetchProducts() {
-//     this.state.products = await axios.get('products.json').then(res => res.data);
-//   },
-//   addProduct(product) {
-//     this.state.products.push(product);
-//   }
-// };
-//
-// export default store;
