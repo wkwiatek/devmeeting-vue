@@ -14,7 +14,7 @@
         v-validate="'required|min:3'"
       >
       <button>Add</button>
-      <!--3- 2. errors are added by default when validation is initialized and have some useful method -->
+      <!--3- 2. errors are added by default when validation is initialized and have some useful methods -->
       <div v-show="errors.has('product')">
         {{ errors.first('product') }}
       </div>
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      // 3. On the JS side we need to use another injected value called $validator to validate all field
+      // 3. On the JS side we need to use yet another injected value called $validator to validate all the fields
       this.$validator.validateAll().then(result => {
         if (!result) {
           return;

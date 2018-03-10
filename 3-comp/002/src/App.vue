@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h2>My awesome list</h2>
-    <!-- 3. Then we can use component by kebab-case'd name and providing :input -->
+    <!-- 3. Then we can use component by kebab-cased name and providing :input -->
     <product-list :products="products"></product-list>
 
     <form @submit.prevent="onSubmit()">
@@ -25,7 +25,7 @@ import ProductList from '../components/ProductList'
 
 export default {
   name: 'app',
-  //3/ 2. And add it to the object called components
+  //3/ 2. And add it to as a key called 'components'
   components: {
     ProductList
   },
