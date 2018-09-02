@@ -3,7 +3,7 @@
     <h2>My awesome list</h2>
 
     <product-list :products="products"></product-list>
-    <add-product @onAddProduct="handleAddProduct"></add-product>
+    <add-product @add-product="onAddProduct"></add-product>
 
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
     }
   },
   methods: {
-    handleAddProduct(product) {
+    onAddProduct(product) {
       this.products.push(product);
     }
   }

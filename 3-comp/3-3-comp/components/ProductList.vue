@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="p in products">{{ p.name }}</li>
+      <li v-for="p in products" :key="p.id">{{ p.name }}</li>
     </ul>
     <p v-if="!products.length">No products!</p>
   </div>

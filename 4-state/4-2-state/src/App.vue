@@ -4,7 +4,7 @@
 
     <!-- 4. Input to the list has to be updated also -->
     <product-list :products="sharedState.products"></product-list>
-    <add-product @onAddProduct="handleAddProduct"></add-product>
+    <add-product @add-product="onAddProduct"></add-product>
 
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     //3/ 5. Handler is using store
-    handleAddProduct(product) {
+    onAddProduct(product) {
       store.addProduct(product);
     }
   }
