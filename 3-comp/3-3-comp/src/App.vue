@@ -3,8 +3,8 @@
     <h2>My awesome list</h2>
 
     <product-list :products="products"></product-list>
-    <!-- With @ we can listen to onAddProduct event and assign handleAddProduct-->
-    <add-product @onAddProduct="handleAddProduct"></add-product>
+    <!-- With @ we can listen to add-product event and assign onAddProduct-->
+    <add-product @add-product="onAddProduct"></add-product>
 
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     //3/ All we have to do in a method is to add product to the list
-    handleAddProduct(product) {
+    onAddProduct(product) {
       this.products.push(product);
     }
   }

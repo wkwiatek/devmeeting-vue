@@ -3,7 +3,7 @@
     <h2>My awesome list</h2>
 
     <product-list :products="products"></product-list>
-    <add-product @onAddProduct="handleAddProduct"></add-product>
+    <add-product @add-product="onAddProduct"></add-product>
 
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
   },
   //5/ methods will now use dispatch function with name of action and payload
   methods: {
-    handleAddProduct(product) {
+    onAddProduct(product) {
       this.$store.dispatch('addProduct', product);
     }
   }

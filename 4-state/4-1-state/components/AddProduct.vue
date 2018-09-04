@@ -30,7 +30,7 @@
           if (!result) {
             return;
           }
-          this.$emit('onAddProduct', {
+          this.$emit('add-product', {
             id: uuid(),
             ...this.newProduct
           });
