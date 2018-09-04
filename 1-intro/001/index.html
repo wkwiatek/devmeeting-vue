@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Vue.js Start</title>
-    <style>
-        #app {
-            font-family: 'Avenir', Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            color: #2c3e50;
-            margin-top: 60px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Vue.js Start</title>
+  <style>
+    #app {
+      font-family: 'Avenir', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #2c3e50;
+      margin-top: 60px;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- 1. Here we have some content -->
-    <h1>Vue.js</h1>
+  <!-- 1. Here we have some content -->
+  <h1>Vue.js</h1>
 
-    <p>is ready to start an adventure</p>
+  <p>is ready to start an adventure</p>
 
-    <!-- 6. If element matches the selector we added, Vue will create a binding -->
-    <div id="app">
-        <!-- 7. We can use Angular-like double brackets to create an expression -->
-        <h2>{{ greeting }}</h2>
-    </div>
+  <!-- 6. If element matches the selector we added, Vue will create a binding -->
+  <div id="app">
+    <!-- 7. We can use Angular-like double brackets to create an expression -->
+    <h2>{{ greeting }}</h2>
+  </div>
 
 
-    <!-- 2. To add Vue.js, we can just add a script tag with CDN as a source -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-    <script>
-      // 3. Vue should be now defined as a global variable
-      new Vue({
-        // 4. With 'el' we can attach it to some specific element using a CSS selector
-        el: '#app',
-        //3/ 5. If we define 'data', the key will be available in HTML in a minute
-        data: {
-          greeting: 'Hello DevMeetings!'
-        }
-      })
-    </script>
+  <!-- 2. To add Vue.js, we can just add a script tag with CDN as a source -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script>
+    // 3. Vue should be now defined as a global variable
+    const app = new Vue({
+      // 4. With 'el' we can attach it to some specific element using a CSS selector
+      el: '#app',
+      //3/ 5. If we define 'data', the key will be available in HTML in a minute
+      data: {
+        greeting: 'Hello DevMeetings!'
+      }
+    })
+  </script>
 </body>
+
 </html>
