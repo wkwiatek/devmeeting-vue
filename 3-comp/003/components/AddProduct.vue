@@ -32,8 +32,8 @@
           if (!result) {
             return;
           }
-          //4/ But instead of adding element we're just emitting onAddProduct event with product as a payload
-          this.$emit('onAddProduct', {
+          //4/ But instead of adding element we're just emitting add-product event with product as a payload
+          this.$emit('add-product', {
             id: uuid(),
             ...this.newProduct
           });

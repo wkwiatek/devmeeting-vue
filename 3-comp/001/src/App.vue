@@ -3,7 +3,7 @@
     <!--5- 1. There is a list part of the app -->
     <h2>My awesome list</h2>
     <ul>
-      <li v-for="p in products">{{ p.name }}</li>
+      <li v-for="p in products" :key="p.id">{{ p.name }}</li>
     </ul>
     <p v-if="!products.length">No products!</p>
 
@@ -23,23 +23,26 @@
 </template>
 
 <script>
-import uuid from 'uuid/v4';
+import uuid from "uuid/v4";
 
 export default {
-  name: 'app',
+  name: "app",
   data() {
     return {
-      products: [{
-        id: 0,
-        name: 'Coffee'
-      }, {
-        id: 1,
-        name: 'Pizza'
-      }],
+      products: [
+        {
+          id: 0,
+          name: "Coffee"
+        },
+        {
+          id: 1,
+          name: "Pizza"
+        }
+      ],
       newProduct: {
-        name: ''
+        name: ""
       }
-    }
+    };
   },
   methods: {
     onSubmit() {
@@ -52,17 +55,17 @@ export default {
           id: uuid(),
           ...this.newProduct
         });
-        this.newProduct.name = '';
+        this.newProduct.name = "";
         this.$validator.reset();
       });
     }
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
