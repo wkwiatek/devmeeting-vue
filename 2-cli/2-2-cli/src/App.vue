@@ -1,4 +1,4 @@
-<!--10- 1. There's a <template> part -->
+<!--10/ 1. There's a <template> part -->
 <template>
   <div id="app">
     <h2>My awesome list</h2>
@@ -10,9 +10,9 @@
   </div>
 </template>
 
-<!--21- 2. A <script> part -->
+<!--21/ 2. A <script> part -->
 <script>
-// 4. Now App is not mounted itself, we're just creating a component (more on that later - hold your horses!)
+//1/ 4. Now App is not mounted itself, we're just creating a component (more on that later - hold your horses!)
 export default {
   name: 'app',
   //11/ 5. Data can no longer be just an object to prevent accidental shared state
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<!--9- 3. And <style> part -->
+<!--9/ 3. And <style> part -->
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

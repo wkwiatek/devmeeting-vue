@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <!--5- 1. There is a list part of the app -->
+    <!--5/ 1. There is a list part of the app -->
     <h2>My awesome list</h2>
     <ul>
       <li v-for="p in products" :key="p.id">{{ p.name }}</li>
     </ul>
     <p v-if="!products.length">No products!</p>
 
-    <!--11- 2. And the add product form -->
+    <!--11/ 2. And the add product form -->
     <form @submit.prevent="onSubmit()">
       <input
         name="product"

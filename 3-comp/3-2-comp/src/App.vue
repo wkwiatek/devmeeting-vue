@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h2>My awesome list</h2>
-    <!-- 3. Then we can use component by kebab-cased name and providing :input -->
+    <!--1/ 3. Then we can use component by kebab-cased name and providing :input -->
     <product-list :products="products"></product-list>
 
     <form @submit.prevent="onSubmit()">
@@ -20,7 +20,7 @@
 
 <script>
 import uuid from 'uuid/v4';
-// 1. To use our new, shiny component we need to import it first
+//1/ 1. To use our new, shiny component we need to import it first
 import ProductList from '../components/ProductList'
 
 export default {

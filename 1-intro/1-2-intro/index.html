@@ -24,12 +24,12 @@
   <div id="app">
     <h2>My awesome list</h2>
     <ul>
-      <!-- 2. Then, we're using built-in v-for directive to iterate over products -->
+      <!--1/ 2. Then, we're using built-in v-for directive to iterate over products -->
       <li v-for="p in products">{{ p.name }}</li>
     </ul>
-    <!-- 5. v-if can be helpful with conditional statements -->
+    <!--1/ 5. v-if can be helpful with conditional statements -->
     <p v-if="!products.length">No products!</p>
-    <!-- 6. v-on adds an handler and :click is the name of the event, then goes the function to invoke -->
+    <!--1/ 6. v-on adds an handler and :click is the name of the event, then goes the function to invoke -->
     <button v-on:click="removeLast()">Remove last item</button>
   </div>
 
@@ -48,7 +48,7 @@
           name: 'Pizza'
         }]
       },
-      // 3. To get some events from user we can define a method in 'methods'
+      //1/ 3. To get some events from user we can define a method in 'methods'
       methods: {
         //3/ 4. The important thing is to use function with execution-based context
         removeLast() {

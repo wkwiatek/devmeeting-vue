@@ -6,9 +6,9 @@
     </ul>
     <p v-if="!products.length">No products!</p>
 
-    <!-- 1. Vue gives as some nice syntax to cope with casual use cases -->
+    <!--1/ 1. Vue gives as some nice syntax to cope with casual use cases -->
     <form @submit.prevent="onSubmit()">
-      <!-- 2. Any Angular fan here? v-model makes a binding with given object -->
+      <!--1/ 2. Any Angular fan here? v-model makes a binding with given object -->
       <input v-model="newProduct.name">
       <button>Add</button>
     </form>

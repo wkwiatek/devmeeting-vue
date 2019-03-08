@@ -7,14 +7,14 @@
     <p v-if="!products.length">No products!</p>
 
     <form @submit.prevent="onSubmit()">
-      <!--3- 1. name attribute is now required as well as v-validate with its own DSL values -->
+      <!--3/ 2. name attribute is now required as well as v-validate with its own DSL values -->
       <input
         name="product"
         v-model="newProduct.name"
         v-validate="'required|min:3'"
       >
       <button>Add</button>
-      <!--3- 2. errors are added by default when validation is initialized and have some useful methods -->
+      <!--3/ 3. errors are added by default when validation is initialized and have some useful methods -->
       <div v-show="errors.has('product')">
         {{ errors.first('product') }}
       </div>
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      // 3. On the JS side we need to use yet another injected value called $validator to validate all the fields
+      //1/ 4. On the JS side we need to use yet another injected value called $validator to validate all the fields
       this.$validator.validateAll().then(result => {
         if (!result) {
           return;
@@ -53,7 +53,7 @@ export default {
           ...this.newProduct
         });
         this.newProduct.name = '';
-        // 4/ and reset validation state after adding a product
+        //1/ 5. and reset validation state after adding a product
         this.$validator.reset();
       });
     }
