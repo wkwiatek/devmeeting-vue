@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ProductList from '../components/ProductList';
+import ProductList from '@/components/ProductList';
 import AddProduct from '../components/AddProduct';
 
 export default {
