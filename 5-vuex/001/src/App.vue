@@ -18,9 +18,6 @@ export default {
     ProductList,
     AddProduct
   },
-  created() {
-    // store.fetchProducts();
-  },
   //5/ Instead of data, we're using 'computed' to get products from injected $store
   computed: {
     products() {
@@ -30,6 +27,7 @@ export default {
   //5/ methods will now use dispatch function with name of action and payload
   methods: {
     onAddProduct(product) {
+      console.log(product);
       this.$store.dispatch('addProduct', product);
     }
   }

@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import createLogger from 'vuex/dist/logger'
-import axios from 'axios';
 
 // Vuex needs to be initialized as it injects some data to the components
 Vue.use(Vuex);
@@ -14,17 +13,14 @@ export default new Vuex.Store({
   },
   //5/ mutations are modifying data stored in state
   mutations: {
-    addProduct(state, payload) {
-      state.products.push(payload.product);
+    ADD_PRODUCT(state, product) {
+      state.products.push(product);
     }
   },
   //8/ actions can be invoked by components, and use mutations
   actions: {
-    addProduct(store, payload) {
-      store.commit({
-        type: 'addProduct',
-        product: payload
-      });
+    addProduct(context, payload) {
+      context.commit('ADD_PRODUCT', payload);
     }
   },
   // extra: we added to logger to see what's going on

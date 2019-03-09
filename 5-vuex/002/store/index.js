@@ -10,28 +10,22 @@ export default new Vuex.Store({
     products: []
   },
   mutations: {
-    addProduct(state, payload) {
-      state.products.push(payload.product);
+    ADD_PRODUCT(state, product) {
+      state.products.push(product);
     },
-    setProducts(state, payload) {
-      state.products = payload.products;
+    SET_PRODUCTS(state, products) {
+      state.products = products;
     }
   },
   actions: {
-    addProduct({ commit }, payload) {
-      commit({
-        type: 'addProduct',
-        product: payload
-      });
+    addProduct({ commit }, product) {
+      commit('ADD_PRODUCT', product);
     },
     //7/ actions can be async and can commit a mutation at any time
     async getProducts({ commit }) {
-      const payload = await axios.get('products.json').then(res => res.data);
-      commit({
-        type: 'setProducts',
-        products: payload
-      });
+      const products = await axios.get('products.json').then(({ data }) => data);
+      commit('SET_PRODUCTS', products);
     }
   },
-  plugins: [createLogger()]
+plugins: [createLogger()]
 });
