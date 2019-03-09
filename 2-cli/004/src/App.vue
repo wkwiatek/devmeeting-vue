@@ -7,7 +7,7 @@
     <p v-if="!products.length">No products!</p>
 
     <form @submit.prevent="onSubmit()">
-      <!--3/ 2. name attribute is now required as well as v-validate with its own DSL values -->
+      <!--5/ 2. name attribute is now required as well as v-validate with its own DSL values -->
       <input
         name="product"
         v-model="newProduct.name"
